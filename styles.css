@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    line-height: 1.6;
 }
 
 header {
@@ -18,23 +19,32 @@ h1 {
 
 main {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.profile, .projects {
+.profile, .projects, skills {
     background: #ffffff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 20px 0;
     padding: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+    max-width: 800px;
 }
 
-h2 {
+h2{
     color: #35424a;
+}
+h2, h3 {
+    margin: 10px 0;
 }
 
 ul {
     list-style-type: none;
-    padding: 0;
+    padding-left: 0;
 }
 
 li {
@@ -53,4 +63,9 @@ footer {
 }
 .jp-text {
     font-family: 'Noto Sans JP', sans-serif;
+}
+@media (max-width: 600px){
+    .project ul, .skills ul, .profile ul {
+        padding-left: 20px;
+    }
 }
