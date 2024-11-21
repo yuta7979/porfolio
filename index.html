@@ -1,71 +1,83 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ポートフォリオ</title>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap" rel="stylesheet"> <!-- Noto Sans JPを追加 -->
-        <link rel="stylesheet" href="styles.css">
-        <style>
-            .wrapper{
-                display: inline-block;
-                vertical-align: top;
-            }
-            body {
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポートフォリオ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .wrapper {
+            display: inline-block;
+            vertical-align: top;
+        }
+        body {
             font-family: 'Noto Sans JP', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
         }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 20px;
+        header, footer {
+            background: #35424a;
+            color: #ffffff;
             text-align: center;
+            padding: 10px 0;
         }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
+        h1 {
             margin: 0;
-        }
-        nav ul li {
-            margin: 0 15px;
-            position: relative;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: background 0.3s, transform 0.3s;
-        }
-        nav ul li a:hover {
-            background: #555; /* 背景色の変更 */
-            transform: scale(1.1); /* フワッと広がる効果 */
         }
         main {
             padding: 20px;
-        }
-        section {
-            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .profile, .projects, .skills {
-            padding: 20px;
-            background: #f9f9f9; /* セクションの背景色 */
+            background: #ffffff;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            padding: 15px;
+            width: 100%;
+            max-width: 800px;
         }
-
-        /* さらにスタイルを整えるための追加のCSS */
         h2 {
+            color: #35424a;
+            margin: 10px 0;
             border-bottom: 2px solid #ddd;
             padding-bottom: 10px;
-            margin-bottom: 20px;
         }
-        </style>
-    </head>
+        h3 {
+            margin: 10px 0;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            margin: 5px 0 15px;
+        }
+        .skill-img {
+            background-color: yellow; /* 変更箇所を示すための背景色 */
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        footer {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 600px) {
+            .profile ul, .projects ul, .skills ul {
+                padding-left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
     <header>
         <h1>My portfolio</h1>
         <nav>
@@ -102,15 +114,18 @@
         <section id="skills" class="skills">
             <h2>Skills</h2>
             <ul>
-                <li><strong>Python,Arduino</strong>・・授業で学習した基礎的な部分は習得済みです。</li>
-                <li><strong>VSCode,HTML,CSS</strong>・・このポートフォリオを作るにあたって必要な程度は習得済みです。</li>
-                <li><strong>Scratch</strong>・・授業で学習した基礎的な部分は習得済みで、中学校でも経験があります。</li>
-                <li><strong>GitHub</strong>・・このサイトを運用するにあたって必要な程度は習得済みです。</li>
-                <li><strong>Ambient,RealVNC</strong>・・実験実習科目にて使用し、Raspberry Piによる遠隔操作にも運用できます。</li>
+                <li><img src="https://img.icons8.com/color/512/python.png" alt="Python" class="skill-img"><strong>Python, Arduino</strong>・・授業で学習した基礎的な部分は習得済みです。</li>
+                <li><img src="https://webree.jp/wp-content/uploads/2020/08/vscode.png" alt="VSCode" class="skill-img"><strong>VSCode, HTML, CSS</strong>・・このポートフォリオを作るにあたって必要な程度は習得済みです。</li>
+                <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Scratchlogo.svg/375px-Scratchlogo.svg.png" alt="Scratch" class="skill-img"><strong>Scratch</strong>・・授業で学習した基礎的な部分は習得済みで、中学校でも経験があります。</li>
+                <li><img src="https://crowdworks.jp/times/wp-content/uploads/2023/01/AdobeStock_385949189-1.jpeg" alt="GitHub" class="skill-img"><strong>GitHub</strong>・・このサイトを運用するにあたって必要な程度は習得済みです。</li>
+                <li><img src="https://iret.media/wp-content/uploads/2015/11/eyecatch-arduino-2-720x378.png" alt="Arduino" class="skill-img"><strong>Arduino</strong>・・授業で学習した基礎的な部分は習得済みです。</li>
+                <li><img src="https://www.terakoya.work/wp-content/uploads/2017/11/html-css.jpg" alt="HTML and CSS" class="skill-img"><strong>HTML, CSS</strong>・・このポートフォリオを作るにあたって必要な程度は習得済みです。</li>
+                <li><strong>Ambient, RealVNC</strong>・・実験実習科目にて使用し、Raspberry Piによる遠隔操作にも運用できます。</li>
             </ul>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 11.16</p>
     </footer>
+</body>
 </html>
