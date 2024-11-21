@@ -33,25 +33,6 @@
             flex-direction: column;
             align-items: center;
         }
-        .navigation {
-            display: flex; /* ボタンを横並びにする */
-            justify-content: center; /* 中央に配置 */
-            gap: 15px; /* ボタンの間隔 */
-            margin-bottom: 20px;
-        }
-        .nav-button {
-            background-color: #2a9d8f; /* 色を見やすくするための変更 */
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 15px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s; /* ホバー時のエフェクト */
-        }
-        .nav-button:hover {
-            background-color: #1f7a73; /* ホバー時の色 */
-        }
         .profile, .projects, .skills {
             background: #ffffff;
             border-radius: 8px;
@@ -77,6 +58,13 @@
         li {
             margin: 5px 0 15px;
         }
+        .skill-img {
+            background-color: yellow; /* 変更箇所を示すための背景色 */
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
         footer {
             position: relative;
             bottom: 0;
@@ -101,42 +89,40 @@
         </nav>
     </header>
     <main>
-        <div class="sections">
-            <section id="profile" class="profile">
-                <h2>Profile</h2>
-                <p>所属: 大阪公立大学工業高等専門学校<br>総合工学システム学科 二年知能情報コース </p>
-                <p>年齢: 17歳</p>
-                <p>趣味: ゲーム、音楽、映画鑑賞</p>
-            </section>
-            <section id="projects" class="projects">
-                <h2>Projects</h2>
-                <h3>Individual</h3>
-                <ul>
-                    <li>＊プログラミングの授業の取り組みとして<strong>Python</strong>を用いた<a href="https://colab.research.google.com/drive/1jFnJ0fOi--P6NMmuU5LCs9ui7ZiAoklx?usp=sharing&authuser=0" target="_blank">カレンダー機能の制作</a>を行いました。
-                    <br>日付ごとに予定を入れたり、削除することができます。
-                    <br>また、すべての予定を一括で表示したり、曜日ごとに予定を固定することができます。</li>
-                    <li>＊<strong>Visual Studio Code</strong>上で<strong>HTML</strong>と<strong>CSS</strong>を駆使して<a href="https://yuta7979.github.io/porfolio/?authuser=0" target="_blank">ポートフォリオ</a>を制作しました。</li>
-                </ul>
-                <h3>Collective</h3>
-                <ul>
-                    <li>＊2024年度高専祭の展示作品でノベルゲーム「<strong><a href="https://youtu.be/0E5J56yqKPI?si=bNjLQ9pCMIe1A3Sq" target="_blank">高専ダイアリー</a></strong>」のティザー映像を制作しました。
-                    <br>その中では登場キャラクターの名前や設定、デザインを担当しました。
-                    <br>ゲーム本体は現状未完成です。</li>
-                </ul>
-            </section>
-            <section id="skills" class="skills">
-                <h2>Skills</h2>
-                <ul>
-                    <li><img src="https://img.icons8.com/color/512/python.png" alt="Python" class="skill-img"><strong>Python</strong>・・授業で学習した基礎的な部分は習得済みです。</li>
-                    <li><img src="https://webree.jp/wp-content/uploads/2020/08/vscode.png" alt="VSCode" class="skill-img"><strong>VSCode</strong>・・このポートフォリオを作るにあたって必要な程度は習得済みです。</li>
-                    <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Scratchlogo.svg/375px-Scratchlogo.svg.png" alt="Scratch" class="skill-img"><strong>Scratch</strong>・・授業で学習した基礎的な部分は習得済みで、中学校でも経験があります。</li>
-                    <li><img src="https://crowdworks.jp/times/wp-content/uploads/2023/01/AdobeStock_385949189-1.jpeg" alt="GitHub" class="skill-img"><strong>GitHub</strong>・・このサイトを運用するにあたって必要な程度は習得済みです。</li>
-                    <li><img src="https://iret.media/wp-content/uploads/2015/11/eyecatch-arduino-2-720x378.png" alt="Arduino" class="skill-img"><strong>Arduino</strong>・・授業で学習した基礎的な部分は習得済みです。</li>
-                    <li><img src="https://www.terakoya.work/wp-content/uploads/2017/11/html-css.jpg" alt="HTML and CSS" class="skill-img"><strong>HTML, CSS</strong>・・このポートフォリオを作るにあたって必要な程度は習得済みです。</li>
-                    <li><strong>Ambient, RealVNC</strong>・・実験実習科目にて使用し、Raspberry Piによる遠隔操作にも運用できます。</li>
-                </ul>
-            </section>
-        </div>
+        <section id="profile" class="profile">
+            <h2>Profile</h2>
+            <p>所属: 大阪公立大学工業高等専門学校<br>総合工学システム学科 二年知能情報コース </p>
+            <p>年齢: 17歳</p>
+            <p>趣味: ゲーム、音楽、映画鑑賞</p>
+        </section>
+        <section id="projects" class="projects">
+            <h2>Projects</h2>
+            <h3>Individual</h3>
+            <ul>
+                <li>＊プログラミングの授業の取り組みとして<strong>Python</strong>を用いた<a href="https://colab.research.google.com/drive/1jFnJ0fOi--P6NMmuU5LCs9ui7ZiAoklx?usp=sharing&authuser=0" target="_blank">カレンダー機能の制作</a>を行いました。
+                <br>日付ごとに予定を入れたり、削除することができます。
+                <br>また、すべての予定を一括で表示したり、曜日ごとに予定を固定することができます。</li>
+                <li>＊<strong>Visual Studio Code</strong>上で<strong>HTML</strong>と<strong>CSS</strong>を駆使して<a href="https://yuta7979.github.io/porfolio/?authuser=0" target="_blank">ポートフォリオ</a>を制作しました。</li>
+            </ul>
+            <h3>Collective</h3>
+            <ul>
+                <li>＊2024年度高専祭の展示作品でノベルゲーム「<strong><a href="https://youtu.be/0E5J56yqKPI?si=bNjLQ9pCMIe1A3Sq" target="_blank">高専ダイアリー</a></strong>」のティザー映像を制作しました。
+                <br>その中では登場キャラクターの名前や設定、デザインを担当しました。
+                <br>ゲーム本体は現状未完成です。</li>
+            </ul>
+        </section>
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li><img src="https://img.icons8.com/color/512/python.png" alt="Python" class="skill-img"><strong>Python</strong>・・授業で学習した基礎的な部分は習得済みです。</li>
+                <li><img src="https://webree.jp/wp-content/uploads/2020/08/vscode.png" alt="VSCode" class="skill-img"><strong>VSCode</strong>・・このポートフォリオを作るにあたって必要な程度は習得済みです。</li>
+                <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Scratchlogo.svg/375px-Scratchlogo.svg.png" alt="Scratch" class="skill-img"><strong>Scratch</strong>・・授業で学習した基礎的な部分は習得済みで、中学校でも経験があります。</li>
+                <li><img src="https://crowdworks.jp/times/wp-content/uploads/2023/01/AdobeStock_385949189-1.jpeg" alt="GitHub" class="skill-img"><strong>GitHub</strong>・・このサイトを運用するにあたって必要な程度は習得済みです。</li>
+                <li><img src="https://iret.media/wp-content/uploads/2015/11/eyecatch-arduino-2-720x378.png" alt="Arduino" class="skill-img"><strong>Arduino</strong>・・授業で学習した基礎的な部分は習得済みです。</li>
+                <li><img src="https://www.terakoya.work/wp-content/uploads/2017/11/html-css.jpg" alt="HTML and CSS" class="skill-img"><strong>HTML, CSS</strong>・・このポートフォリオを作るにあたって必要な程度は習得済みです。</li>
+                <li><strong>Ambient, RealVNC</strong>・・実験実習科目にて使用し、Raspberry Piによる遠隔操作にも運用できます。</li>
+            </ul>
+        </section>
     </main>
     <footer>
         <p>&copy; 2024 11.16</p>
