@@ -34,7 +34,7 @@ nav li {
 nav a {
     text-decoration: none;
     color: white;
-    background-color: #6a1b9a; /* ボタンの背景色 */
+    background-color: #4a90e2; /* ボタンの背景色 */
     padding: 10px 20px; /* ボタン内のパディング */
     border-radius: 5px; /* ボタンの角を丸くする */
     transition: transform 0.3s ease, background-color 0.3s ease; /* アニメーションの設定 */
@@ -42,7 +42,7 @@ nav a {
 
 nav a:hover {
     transform: scale(1.1); /* ホバー時に少し拡大 */
-    background-color: #8e24aa; /* ホバー時の背景色 */
+    background-color: #357ABD; /* ホバー時の背景色 */
 }
 
 main {
