@@ -17,6 +17,34 @@ h1 {
     margin: 0;
 }
 
+nav {
+    margin: 20px 0; /* ナビゲーションと他の要素の間にマージンを追加 */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 15px; /* 各ボタンの間にマージンを追加 */
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    background-color: #6a1b9a; /* ボタンの背景色 */
+    padding: 10px 20px; /* ボタン内のパディング */
+    border-radius: 5px; /* ボタンの角を丸くする */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* アニメーションの設定 */
+}
+
+nav a:hover {
+    transform: scale(1.1); /* ホバー時に少し拡大 */
+    background-color: #8e24aa; /* ホバー時の背景色 */
+}
+
 main {
     padding: 20px;
     display: flex;
@@ -63,7 +91,4 @@ footer {
 }
 
 @media (max-width: 600px) {
-    .profile ul, .projects ul, .skills ul {
-        padding-left: 20px;
-    }
-}
+    .profile
