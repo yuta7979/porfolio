@@ -33,20 +33,33 @@
             flex-direction: column;
             align-items: center;
         }
-        .sections {
-            display: flex; /* 横並びにするためにflexboxを使用 */
-            justify-content: space-around; /* 各項目のスペースを均等に */
-            width: 100%;
-            margin-top: 20px; /* 上部マージンを追加 */
+        .navigation {
+            display: flex; /* ボタンを横並びにする */
+            justify-content: center; /* 中央に配置 */
+            gap: 15px; /* ボタンの間隔 */
+            margin-bottom: 20px;
+        }
+        .nav-button {
+            background-color: #2a9d8f; /* 色を見やすくするための変更 */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s; /* ホバー時のエフェクト */
+        }
+        .nav-button:hover {
+            background-color: #1f7a73; /* ホバー時の色 */
         }
         .profile, .projects, .skills {
             background: #ffffff;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin: 0 10px; /* 横のマージンを追加 */
+            margin: 20px 0;
             padding: 15px;
-            width: 30%; /* 各項目の幅を設定 */
-            max-width: 300px; /* 最大幅を設定 */
+            width: 100%;
+            max-width: 800px;
         }
         h2 {
             color: #35424a;
@@ -64,26 +77,14 @@
         li {
             margin: 5px 0 15px;
         }
-        .skill-img {
-            background-color: yellow; /* 変更箇所を示すための背景色 */
-            width: 50px;
-            height: auto;
-            margin-right: 10px;
-            vertical-align: middle;
-        }
         footer {
             position: relative;
             bottom: 0;
             width: 100%;
         }
         @media (max-width: 600px) {
-            .sections {
-                flex-direction: column; /* モバイルでは縦並びにする */
-                align-items: center; /* 中央に整列 */
-            }
-            .profile, .projects, .skills {
-                width: 90%; /* 幅を広げる */
-                max-width: none; /* 最大幅の制限を解除 */
+            .profile ul, .projects ul, .skills ul {
+                padding-left: 20px;
             }
         }
     </style>
